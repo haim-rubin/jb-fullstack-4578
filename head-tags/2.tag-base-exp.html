@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--head התגיות שניתן להשתמש בהן בתוך תגית ה-->
+        <title>Website/Page description</title> <!--משפיע על כיתוב הלשונית של הדפדפן-->
+        <base href="https://example.com"> <!-- <a> בתגית hrefמשפיע על כל הקישורים היחסיים שקיימים בדף, דוגמת ה-->
+        <link  href="../style.css" rel="stylesheet"> <!--כי כאן יחסית baseגם הכתובת ממנה הדפדפן יבקש את קובץ הסגנון יושפע מהגדרת ה-->
+        <script src="../script.js"></script> <!--כי כאן יחסית baseגם הכתובת ממנה הדפדפן יבקש את קובץ התסריט יושפע מהגדרת ה-->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script><!-- וזאת מכיון שהכתובת כאן אינה יחסית baseכאן הכתובת ממנה הדפדפן יבקש את קובץ התסריט לא יושפע מהגדרת ה-->
+    </head>
+    <body>
+        <a href="../fullstack-70">This will open 'https://example.com/fullstack-70'</a><!--כי כאן יחסית baseגם הכתובת אליה הדפדפן יפנה יושפע מהגדרת ה-->
+        <img src="https://www.seekpng.com/png/detail/855-8550591_html-css-javascript-icons.png"/><!-- וזאת מכיון שהכתובת כאן אינה יחסית baseכאן הכתובת ממנה הדפדפן יבקש את קובץ התמונה לא יושפע מהגדרת ה-->
+    </body>
+</html>

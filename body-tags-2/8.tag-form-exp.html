@@ -1,0 +1,40 @@
+
+<!DOCTYPE html> <!--שמשתמשים בדף זה HTMLתגית המציינת את גרסת ה-->
+<html> <!-- תגית הראשית של הדף -->
+    <head>  <!-- תגית המשמשת להגדרות ומידע על דף זה, תגית זו אינה מוצגת על הדף -->
+    </head>
+    <body> <!-- תגית גוף הדף, תגית זו הינה גוף הדף ובדר״כ עיקר השינויים יתרחשו בתוך תגית זו  -->
+        <!-- כאן בדר״כ נכתוב את רוב התגיות שמשפיעות על תצוגת הדף -->
+       
+        <h1>Form "GET" example</h1> <!-- Form get will direct to the end point with the params on the URL-->
+        <!--name תחת המזהה שמופיע בתכונה inputsאוספת את ערכי ה form תגית ה -->
+        <!-- וכאשר פרטי הטופס נשלחים הערך מוצמד למזהה -->
+        <form action="0.tag-label-exp.html" method="get">
+            <div>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" />
+            </div>
+            <div>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" />
+            </div>
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Reset Form" />
+        </form>
+
+
+        <h1>Form "POST" example</h1> <!-- Form post will direct to the end point with the params on the body-->
+        <form action="0.tag-label-exp.html" method="post" >
+            <div>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" />
+            </div>
+            <div>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" />
+            </div>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset Form" />
+        </form>
+    </body>
+</html>

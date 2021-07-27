@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!--שמשתמשים בדף זה HTMLתגית המציינת את גרסת ה-->
+<html> <!-- תגית הראשית של הדף -->
+    <head>  <!-- תגית המשמשת להגדרות ומידע על דף זה, תגית זו אינה מוצגת על הדף -->
+        <!--  /*  */ עוטפים עם cssהערות בתוך בלוק ה  -->
+        
+        <style>
+            body {
+                font-size: 30px;
+            }
+            /* סלקטור צאצא */
+            /* descendant selector (space) */
+            /* החוק הבא ייתיחס לכפתור שנמצא בתוך דיב, כפתורים שאינם נמצאים בתוך דיב לא יקבלו את החוק */
+            /* לפי הדוגמאות מטה, הכפתור קליק מי 2 לא יקבל את חוק העיצוב ואחלו שאר הכפתורים כן */
+            div button { background-color: yellowgreen; font-size: inherit;}
+           
+            /* לא משנה איפה בהררכיה אם קיים דיב ובתוכו ספאן צבע הכיתוב יהיה ירוק */
+            div span {
+                color : green;
+            }
+
+            /* סלקטור ילד */
+            /* child selector (>) */
+            /* רק אם קיים בהררכיה דיב ובתוכו ספאן כילד ברמה הראשונה צבע הכיתוב יהיה סגול */        
+            div > span {
+                background: violet;
+            }
+
+            /* סלקטור אח עוקב סמוך */
+            /* adjacent sibling selector (+) */
+            div + p {
+                background-color: red;
+            }
+            div + span + p + h1{background:blue; color: greenyellow;}
+          
+            /* סלקטור אחים עוקבים */
+            /* general sibling selector (~) */
+            span ~button{background: hotpink;}
+
+            div + span + p ~ h1{font-weight: bold;}
+        </style>
+    </head>
+    <body> <!-- תגית גוף הדף, תגית זו הינה גוף הדף ובדר״כ עיקר השינויים יתרחשו בתוך תגית זו  -->
+        <!-- כאן בדר״כ נכתוב את רוב התגיות שמשפיעות על תצוגת הדף -->
+            
+            <div>
+                <button>
+                    Will be affected by selector: "div button"
+                </button>
+            </div>
+            <p>Will be affected by selector: "div + p"</p>
+            <div>
+                <span>
+                    Will be affected by selectors: "div span" & "div > span" 
+                    <p>
+                        <span>Will be affected by selector: "div span"</span>
+                    </p>
+                </span>
+
+            </div>
+            <span>Will not be affected</span>
+            <p>Will not be affected</p>
+            <h1>Will be affected by selector: div + span + p ~ h1</h1>
+            <h1>This element will not be affected by selector: "div + p" but it will be affected by selector: "div + span + p ~ h1"</h1>
+
+            <span>All buttons after me will be affected by selector: "span ~button"</span>
+            <button>b1</button>
+            <button>b2</button>
+            <button>b3</button>
+    </body>
+</html>

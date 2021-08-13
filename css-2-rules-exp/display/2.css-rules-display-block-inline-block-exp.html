@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!--שמשתמשים בדף זה HTMLתגית המציינת את גרסת ה-->
+<html> <!-- תגית הראשית של הדף -->
+    <head>  <!-- תגית המשמשת להגדרות ומידע על דף זה, תגית זו אינה מוצגת על הדף -->
+        <!--  /*  */ עוטפים עם cssהערות בתוך בלוק ה  -->
+       
+        <style>
+     
+            /* דיספליי אינליין בלוק שואף לשמור את התוכן באותה השורה ומאפשר להחל חוקי גודל כגון רוחב וגובה */
+            /* במידה ולא נגדיר ערכי רוחב וגובה, הרוחב והגובה יהיו בגודל התוכן בתוך התגית */
+            .class-inline-block{ display: inline-block; background: darkcyan;}
+            .class-inline-width-height{ height: 200px; width: 300px;}
+            /* דיספליי בלוק יורד לשורה חדשה ומאפשר להחל חוקי גודל כגון רוחב וגובה */
+            .class-block{ display: block; background:darksalmon;}
+           
+        </style>
+    </head>
+    <body> <!-- תגית גוף הדף, תגית זו הינה גוף הדף ובדר״כ עיקר השינויים יתרחשו בתוך תגית זו  -->
+        <!-- כאן בדר״כ נכתוב את רוב התגיות שמשפיעות על תצוגת הדף -->
+            <div class="class-inline-block class-inline-width-height">
+                מאפשר להחל על התגית את הרוחב והגובה
+                inline-block
+            </div>
+            <br/>
+            <div class="class-block">
+             מאפשר להחל על התגית את הרוחב והגובה ויורד שורה חדשה
+                block
+            </div>
+        </br>
+          <div class="class-block">
+                <div class="class-inline-block">
+                    Yossi
+                </div>
+                <div class="class-inline-block">
+                    Polimer 10 Tel Aviv
+                </div>
+                <div class="class-inline-block">
+                        <div class="class-block">
+                            Avi
+                        </div>
+                        <div class="class-block">
+                            Rita
+                        </div>
+                        <div class="class-block">
+                            Wolt
+                        </div>
+                </div>
+                </div>
+            </div>
+
+    </body>
+</html>

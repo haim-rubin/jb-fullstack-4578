@@ -1,0 +1,166 @@
+<!DOCTYPE html> <!--שמשתמשים בדף זה HTMLתגית המציינת את גרסת ה-->
+<html> <!-- תגית הראשית של הדף -->
+    <head>  <!-- תגית המשמשת להגדרות ומידע על דף זה, תגית זו אינה מוצגת על הדף -->
+        <!--  /*  */ עוטפים עם cssהערות בתוך בלוק ה  -->
+       
+        <style>
+            /* דיספליי נון משמעותו לא להציג */
+            .class-hide { display: none;}
+            /* דיספליי אינליין שואף לשמור את התוכן באותה השורה אך אינו מאפשר להחל חוקי גודל כגון רוחב וגובה */
+            .class-inline{ display: inline; width: 400px; height: 300px; background: darkgoldenrod;}
+            
+            /* דיספליי אינליין בלוק שואף לשמור את התוכן באותה השורה ומאפשר להחל חוקי גודל כגון רוחב וגובה */
+            /* במידה ולא נגדיר ערכי רוחב וגובה, הרוחב והגובה יהיו בגודל התוכן בתוך התגית */
+            .class-inline-block{ display: inline-block;  height: 300px; background: darkcyan;}
+
+            /* דיספליי בלוק יורד לשורה חדשה ומאפשר להחל חוקי גודל כגון רוחב וגובה */
+            .class-block{ display: block; height: 200px; background:darksalmon;}
+            .table { background: lightcoral; }
+            .row {display: grid; grid-template-columns: auto auto auto; padding: 3px;}
+
+            .col {display: inline-grid; width: 200px;}
+            .row.header, .row-block.header{ border-bottom: 1px solid gray; background: honeydew;}
+
+            .table-block { background: lightskyblue; }
+            .table-block .row-block {display: block; padding: 3px;}
+
+            .col-block {display: inline-block; width: 200px;}
+            .flex-row{display: flex;}
+            .flex-cols{}
+        </style>
+    </head>
+    <body> <!-- תגית גוף הדף, תגית זו הינה גוף הדף ובדר״כ עיקר השינויים יתרחשו בתוך תגית זו  -->
+        <!-- כאן בדר״כ נכתוב את רוב התגיות שמשפיעות על תצוגת הדף -->
+            <a href="https://www.w3schools.com/cssref/" >CSS ref W3C
+            </a>
+            <div class="class-inline">
+                אינו מאפשר להחל על התגית את הרוחב והגובה
+                inline
+            </div>
+            <div class="class-inline-block">
+                מאפשר להחל על התגית את הרוחב והגובה
+                inline-block
+            </div>
+            <div class="class-block">
+             מאפשר להחל על התגית את הרוחב והגובה ויורד שורה חדשה
+                block
+            </div>
+            <div>יצירת טבלה באמצעות חוקי דיספלי גריד ואינליין גריד</div>
+            <div class="table-block">
+                <div class="row-block header">
+                    <div class="col-block">
+                        Name
+                    </div>
+                    <div class="col-block">
+                        Address
+                    </div>
+                    <div class="col-block">
+                        Childrens
+                    </div>
+                </div>
+                <div class="row-block">
+                    <div class="col-block">
+                        Amir Amram
+                    </div>
+                    <div class="col-block">
+                        Kibuts Galuyot 10 Tel Aviv
+                    </div>
+                    <div class="col-block">
+                            <div class="row-block">
+                                Rami
+                            </div>
+                            <div class="row-block">
+                                Efrat
+                            </div>
+                            <div class="row-block">
+                                Zohar
+                            </div>
+                    </div>
+                </div>
+                <div class="row-block">
+                    <div class="col-block">
+                        Yossi
+                    </div>
+                    <div class="col-block">
+                        Polimer 10 Tel Aviv
+                    </div>
+                    <div class="col-block">
+                            <div class="row-block">
+                                Avi
+                            </div>
+                            <div class="row-block">
+                                Rita
+                            </div>
+                            <div class="row-block">
+                                Wolt
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>יצירת טבלה באמצעות חוקי דיספלי גריד ואינליין גריד</div>
+            <div class="table">
+                <div class="row header">
+                    <div class="col">
+                        Name
+                    </div>
+                    <div class="col">
+                        Address
+                    </div>
+                    <div class="col">
+                        Childrens
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Amir Amram
+                    </div>
+                    <div class="col">
+                        Kibuts Galuyot 10 Tel Aviv
+                    </div>
+                    <div class="col">
+                            <div class="row">
+                                Rami
+                            </div>
+                            <div class="row">
+                                Efrat
+                            </div>
+                            <div class="row">
+                                Zohar
+                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Yossi
+                    </div>
+                    <div class="col">
+                        Polimer 10 Tel Aviv
+                    </div>
+                    <div class="col">
+                            <div class="row">
+                                Avi
+                            </div>
+                            <div class="row">
+                                Rita
+                            </div>
+                            <div class="row">
+                                Wolt
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-row">
+                <div>
+                    Item 1
+                </div>
+                <div>
+                    Item 2
+                </div>
+                <div>
+                    Item 3
+                </div>
+            </div>
+    </body>
+</html>

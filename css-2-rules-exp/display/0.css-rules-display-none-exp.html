@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!--שמשתמשים בדף זה HTMLתגית המציינת את גרסת ה-->
+<html> <!-- תגית הראשית של הדף -->
+    <head>  <!-- תגית המשמשת להגדרות ומידע על דף זה, תגית זו אינה מוצגת על הדף -->
+        <!--  /*  */ עוטפים עם cssהערות בתוך בלוק ה  -->
+       
+        <style>
+            /* דיספליי נון משמעותו לא להציג */
+            .class-hide { display: none;}
+
+            /* סלקטור חדש מאפשר להחל חוקי הסטייל במידה וקיימים מספר קלאסיים יחדיו */
+            /* remove-hide-set-block ואת  הקלאס class-hide הסלקטור הבא מחייב שלתגית יהיה את את שני הקלאסים ז״א את הקלאס  */
+            /* בדוגמא הבאה תגית המכילה את את שני הקלאסים הבאים תדרוס את הדיספליי נון בדיספליי בלוק */
+            .class-hide.remove-hide-set-block{display: block;}
+
+            .class-hide.remove-hide-set-block div{display: inline-block;}
+
+
+        </style>
+    </head>
+    <body> <!-- תגית גוף הדף, תגית זו הינה גוף הדף ובדר״כ עיקר השינויים יתרחשו בתוך תגית זו  -->
+        <!-- כאן בדר״כ נכתוב את רוב התגיות שמשפיעות על תצוגת הדף -->
+            <div class="class-hide">
+                <div>
+                    Item 1
+                </div>
+                <div>
+                    Item 2
+                </div>
+                <div>
+                    Item 3
+                </div>
+            </div>
+
+            <div class="class-hide remove-hide-set-block">
+                <div>
+                    Item 4
+                </div>
+                <div>
+                    Item 5
+                </div>
+                <div>
+                    Item 6
+                </div>
+            </div>
+    </body>
+</html>
